@@ -10,6 +10,8 @@
 #' zero_var_index <- zero_var(df)
 #' df_without_zerovariance <- df[,-zero_var_index]
 
+
+
 zero_var <- function(df){
   zv_idx <- lapply(df, function(x) length(unique(x)))
   want   <- which(!zv_idx > 1)
